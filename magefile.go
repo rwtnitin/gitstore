@@ -16,7 +16,7 @@ func Run() error {
 }
 
 func Build() error {
-	return sh.RunV("go", "build", "-tags=mage", "-o", "gitstore", ".")
+	return sh.RunV("go", "build", "-o", "gitstore", "./cmd/main.go")
 }
 
 func Clean() {
