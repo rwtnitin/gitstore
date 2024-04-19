@@ -1,0 +1,16 @@
+package pages
+
+import "github.com/rwtnitin/gitstore/web/views/layouts"
+import "github.com/rwtnitin/gitstore/web/views/components"
+
+templ HomePage() {
+	@layouts.BaseLayout("Home") {
+		<h1 class="text-red-600">This is Home Page</h1>
+		<form id="countform" action="/count" method="GET" hx-get="/count" hx-target="#count" hx-swap="innerHTML">
+			<div id="count">
+				@components.Counter(0)
+			</div>
+			<button type="submit">+1</button>
+		</form>
+	}
+}
