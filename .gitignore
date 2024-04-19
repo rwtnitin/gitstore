@@ -19,3 +19,8 @@
 
 # Go workspace file
 go.work
+
+tmp
+
+*_templ.txt
+*_templ.go
