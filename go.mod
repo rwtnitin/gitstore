@@ -7,6 +7,6 @@ require (
 	github.com/magefile/mage v1.15.0
 )
 
-require github.com/a-h/templ v0.2.663
+require github.com/a-h/templ v0.2.707
 
 require github.com/joho/godotenv v1.5.1 // indirect
