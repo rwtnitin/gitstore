@@ -9,9 +9,13 @@ import (
 )
 
 type Config struct {
-	Port     string
-	DSN      string
-	HOSTNAME string
+	Port        string
+	DSN         string
+	HOSTNAME    string
+	DB_HOST     string
+	DB_NAME     string
+	DB_PASSWORD string
+	DB_USER     string
 }
 
 func LoadConfig() Config {
@@ -23,8 +27,12 @@ func LoadConfig() Config {
 	}
 
 	return Config{
-		Port:     os.Getenv("PORT"),
-		DSN:      os.Getenv("DSN"),
-		HOSTNAME: os.Getenv("HOSTNAME"),
+		Port:        os.Getenv("PORT"),
+		DSN:         os.Getenv("DSN"),
+		HOSTNAME:    os.Getenv("HOSTNAME"),
+		DB_HOST:     os.Getenv("DB_HOST"),
+		DB_NAME:     os.Getenv("DB_NAME"),
+		DB_PASSWORD: os.Getenv("DB_PASSWORD"),
+		DB_USER:     os.Getenv("DB_USER"),
 	}
 }
